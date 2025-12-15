@@ -1,45 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kyle Bistrain</title>
   <style>
     body {
       font-family: Georgia, serif;
-      max-width: 900px;
-      margin: 40px auto;
       color: #111;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 980px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+    .topline {
+      border-top: 1px solid #ddd;
+      margin-bottom: 40px;
     }
     .profile {
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-top: 40px;
     }
-    img {
-      width: 220px;
-      border-radius: 8px;
+    .photo {
+      width: 240px;
+      border-radius: 10px;
+      display: block;
+    }
+    h1 {
+      font-size: 56px;
+      line-height: 1.05;
+      margin: 0 0 18px 0;
+      font-weight: 700;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.5;
+      margin: 0 0 14px 0;
+      max-width: 640px;
+    }
+    .meta {
+      margin-top: 18px;
+      font-size: 20px;
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 40px 0;
+    }
+    h2 {
+      font-size: 30px;
+      margin: 0 0 12px 0;
+    }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .small {
+      font-size: 16px;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 820px) {
+      .profile {
+        grid-template-columns: 1fr;
+      }
+      .photo {
+        width: 200px;
+      }
+      h1 {
+        font-size: 44px;
+      }
     }
   </style>
 </head>
+
 <body>
+  <div class="container">
+    <div class="topline"></div>
 
-<div class="profile">
-  <img src="photo.jpg" alt="Kyle Bistrain">
-  <div>
-    <h1>Kyle Bistrain</h1>
-    <p>
-      I work on applied statistical modeling and machine learning, with an emphasis
-      on reproducible and empirically grounded methods.
-    </p>
-    <p>
-      M.S. Statistics, Cal Poly San Luis Obispo
-    </p>
-    <p>
-      <a href="mailto:your@email.com">Email</a> ·
-      <a href="https://github.com/kylebistrain">GitHub</a>
-    </p>
+    <div class="profile">
+      <div>
+        <img class="photo" src="photo.jpg" alt="Kyle Bistrain" />
+        <div class="small" style="margin-top:10px;">
+          Email: <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a>
+        </div>
+      </div>
+
+      <div>
+        <h1>Kyle Bistrain</h1>
+
+        <p>
+          I work on applied statistical modeling and machine learning, with an emphasis on reproducible and
+          empirically grounded methods.
+        </p>
+
+        <p class="meta">
+          M.S. Statistics, Cal Poly San Luis Obispo
+        </p>
+
+        <p class="meta">
+          <a href="mailto:YOUR_EMAIL_HERE">Email</a> ·
+          <a href="https://github.com/kylebistrain">GitHub</a> ·
+          <a href="https://digitalcommons.calpoly.edu/theses/3148/">Master’s Thesis</a>
+        </p>
+      </div>
+    </div>
+
+    <hr />
+
+    <h2>Research</h2>
+    <ul>
+      <li>
+        <strong>Master’s Thesis:</strong>
+        No-arbitrage-constrained deep learning for option pricing (SPY options).
+        <a href="https://digitalcommons.calpoly.edu/theses/3148/">PDF</a>
+      </li>
+    </ul>
   </div>
-</div>
-
 </body>
 </html>
