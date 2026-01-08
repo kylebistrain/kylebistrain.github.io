@@ -3,89 +3,79 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kyle Bistrain | Quantitative Researcher & Statistician</title>
+  <title>Kyle R. Bistrain | Quantitative Researcher</title>
   <style>
     :root {
-      --primary-color: #1a73e8;
-      --text-main: #111;
-      --text-muted: #444;
-      --border-color: #eee;
+      --primary: #1a73e8;
+      --bg: #ffffff;
+      --card-bg: #f8f9fa;
+      --text: #111111;
+      --text-light: #555555;
+      --border: #eeeeee;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
-      color: var(--text-main);
-      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
       line-height: 1.6;
       margin: 0;
       padding: 0;
     }
     .container {
-      max-width: 900px;
+      max-width: 850px;
       margin: 60px auto;
-      padding: 0 30px;
+      padding: 0 25px;
     }
     header {
       display: flex;
       align-items: center;
-      gap: 40px;
+      gap: 35px;
       margin-bottom: 50px;
     }
     .photo {
-      width: 180px;
-      height: 180px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      border: 1px solid var(--border-color);
+      border: 1px solid var(--border);
     }
-    h1 {
-      font-size: 48px;
-      margin: 0 0 10px 0;
-      letter-spacing: -0.5px;
-    }
-    .tagline {
-      font-size: 20px;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-    .social-links a {
-      margin-right: 15px;
-      font-weight: 500;
-      color: var(--primary-color);
+    h1 { font-size: 42px; margin: 0; font-weight: 800; letter-spacing: -0.5px; }
+    .subtitle { font-size: 20px; color: var(--text-light); margin-bottom: 15px; }
+    .nav-links a {
+      margin-right: 20px;
+      font-weight: 600;
+      color: var(--primary);
       text-decoration: none;
+      font-size: 16px;
     }
-    section {
-      margin-top: 40px;
-      border-top: 1px solid var(--border-color);
-      padding-top: 30px;
+    .nav-links a:hover { text-decoration: underline; }
+    section { margin-top: 50px; border-top: 1px solid var(--border); padding-top: 35px; }
+    h2 { font-size: 22px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 25px; color: #000; }
+    .card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      border: 1px solid #f0f0f0;
     }
-    h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-      color: #000;
+    .card h3 { margin-top: 0; color: var(--primary); font-size: 20px; }
+    .tag {
+      display: inline-block;
+      background: #e8f0fe;
+      color: var(--primary);
+      padding: 2px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
-    .project-card {
-      margin-bottom: 30px;
-      padding: 20px;
-      background: #f9f9f9;
-      border-radius: 8px;
-    }
-    .project-card h3 {
-      margin-top: 0;
-      color: var(--primary-color);
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    ul { padding-left: 20px; }
+    .skills-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    ul { padding-left: 20px; margin: 10px 0; }
     li { margin-bottom: 8px; }
-    
-    @media (max-width: 768px) {
+
+    @media (max-width: 600px) {
       header { flex-direction: column; text-align: center; }
-      .skills-grid { grid-template-columns: 1fr; }
+      .skills-container { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -93,72 +83,69 @@
 
 <div class="container">
   <header>
-    <img src="photo.jpg" alt="Kyle Bistrain" class="photo">
+    <img src="photo.jpg" alt="Kyle R. Bistrain" class="photo">
     <div>
       <h1>Kyle R. Bistrain</h1>
-      <div class="tagline">M.S. Statistics | Quantitative Researcher</div>
-      <div class="social-links">
+      <p class="subtitle">M.S. Statistics | Cal Poly San Luis Obispo</p>
+      <nav class="nav-links">
         <a href="mailto:kylebistrain@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/kylebistrain">LinkedIn</a>
-        <a href="https://github.com/kylebistrain">GitHub</a>
-      </div>
+        <a href="https://linkedin.com/in/kylebistrain" target="_blank">LinkedIn</a>
+        <a href="https://github.com/kyle-bistrain" target="_blank">GitHub</a>
+      </nav>
     </div>
   </header>
 
-  <section id="about">
+  <section>
     <h2>About</h2>
     <p>
-      I specialize in applied statistical modeling and machine learning, focusing on financial engineering and stochastic simulations. 
-      My work bridges the gap between theoretical statistics and practical market applications, from pricing American options to 
-      simulating limit order books[cite: 17, 41].
+      I specialize in applied statistical modeling and machine learning, with an emphasis on financial engineering and reproducible empirical methods. 
+      My work bridges the gap between theoretical statistics and practical market applications, from pricing American options to simulating limit order books.
     </p>
   </section>
 
-  <section id="special-research">
+  <section>
     <h2>Core Quantitative Research</h2>
     
-    <div class="project-card">
+    <div class="card">
+      <span class="tag">MASTER'S THESIS</span>
       <h3>NNs & No-Arbitrage Option Pricing</h3>
       <p>
-        My research improves out-of-sample RMSE by up to 70% in OTM calls compared to the Black-Scholes-Merton model. 
-        By incorporating implied volatility features into deep neural networks, I developed a framework for American SPY option pricing 
-        that includes:
+        Developed a deep learning framework for American SPY option pricing that incorporates implied volatility features to improve out-of-sample RMSE by up to 70% compared to Black-Scholes-Merton.
       </p>
       <ul>
-        <li>Walk-forward validation and no-arbitrage diagnostics[cite: 18].</li>
-        <li>Custom loss functions to penalize arbitrage violations in predicted surfaces.</li>
-        <li>Regime-based performance analysis presented at the 2025 UCSB Data Science Capstone[cite: 19].</li>
+        <li>Implemented a walk-forward framework with reproducible data cleaning, rolling cross-validation, and no-arbitrage diagnostics.</li>
+        <li>Focus on model tradeoffs and regime-based performance, presented at the 2025 UCSB Data Science Capstone.</li>
+        <li><strong>Thesis:</strong> <a href="https://digitalcommons.calpoly.edu/theses/3148/" target="_blank" style="color:var(--primary); font-weight:bold;">View Full Research PDF</a></li>
       </ul>
     </div>
 
-    <div class="project-card">
-      <h3>Systematic Option Trading Strategy</h3>
+    <div class="card">
+      <span class="tag">QUANTITATIVE STRATEGY</span>
+      <h3>Option Trading Strategy</h3>
       <p>
-        <em>[Insert details here about your specific strategy, such as: "Utilizing the no-arbitrage NN model to identify mispriced 
-        contracts in the SPY complex, combined with a volatility-surface mean reversion signal..."]</em>
+        <em>Leveraging neural network architectures to identify relative value opportunities in SPY options. This strategy utilizes no-arbitrage constraints as a filtering mechanism to isolate structural mispricing from model noise.</em>
       </p>
     </div>
   </section>
 
-  <section id="experience">
-    <h2>Professional Experience</h2>
-    <ul>
-      <li><strong>Graduate Researcher, Cal Poly Statistics:</strong> Developed walk-forward frameworks for SPY option pricing[cite: 10, 18].</li>
-      <li><strong>Graduate Statistical Consultant:</strong> Designed experiments and power analyses for complex study validity[cite: 20, 23].</li>
-      <li><strong>Quantitative Analyst Intern, Green Canvas Partners:</strong> Directed historical data vendor selection and audited API integrity for ML backtesting[cite: 26, 29, 30].</li>
-    </ul>
-  </section>
-
-  <section id="skills">
+  <section>
     <h2>Technical Arsenal</h2>
-    <div class="skills-grid">
+    <div class="skills-container">
       <div>
         <strong>Programming & ML</strong>
-        <p>Python (NumPy, pandas), R (simmer), SQL, SAS, TensorFlow, PyTorch, Keras[cite: 37, 41].</p>
+        <ul>
+          <li>Python, R (simmer), SQL, SAS</li>
+          <li>TensorFlow, PyTorch, Keras, Scikit-learn</li>
+          <li>NumPy, pandas, Ensemble Methods</li>
+        </ul>
       </div>
       <div>
         <strong>Statistics & Tools</strong>
-        <p>GLM, Mixed-effects models, Git, Tableau, JMP[cite: 24, 37].</p>
+        <ul>
+          <li>GLM & Mixed-Effects Models</li>
+          <li>Experimental Design & Power Analysis</li>
+          <li>Git, Tableau, JMP</li>
+        </ul>
       </div>
     </div>
   </section>
